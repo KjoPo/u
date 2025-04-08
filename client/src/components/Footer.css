@@ -1,0 +1,136 @@
+/* Base Styles */
+.usps-footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid #dadada;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+  color: #004B87;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-subheading {
+  color: #333;
+  font-size: clamp(13px, 1.3vw, 15px);
+  font-weight: bold;
+  margin: 15px 0 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  font-size: clamp(13px, 1.3vw, 15px);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.footer-links a:hover {
+  color: #004B87;
+  text-decoration: underline;
+}
+
+.footer-divider {
+  border-top: 1px solid #dadada;
+  margin: 30px 0;
+}
+
+.footer-copyright {
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: #666;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .footer-columns {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+  
+  .usps-footer {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+  
+  .footer-column {
+    margin-bottom: 15px;
+  }
+  
+  .footer-heading {
+    font-size: 14px;
+  }
+  
+  .footer-subheading,
+  .footer-links a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-divider {
+    margin: 20px 0;
+  }
+  
+  .footer-copyright {
+    padding-top: 15px;
+  }
+}
